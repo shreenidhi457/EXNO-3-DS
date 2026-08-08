@@ -82,6 +82,7 @@ pd.get_dummies(df2,columns=["nom_0"])
 ~~~
 
 <img width="1917" height="1018" alt="Screenshot 2026-08-06 201309" src="https://github.com/user-attachments/assets/88b62cf7-cd0e-45a9-be60-2bae0306a8d5" />
+
 ~~~
 pip install --upgrade category_encoders
 ~~~
