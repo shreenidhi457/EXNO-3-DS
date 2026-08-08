@@ -183,6 +183,7 @@ plt.show()
 ~~~
 
 <img width="1917" height="1015" alt="Screenshot 2026-08-06 201910" src="https://github.com/user-attachments/assets/9b9a3681-e056-439f-a295-d0a5fda53eab" />
+
 ~~~
 from sklearn.preprocessing import QuantileTransformer
 
@@ -226,15 +227,6 @@ plt.show()
 ~~~
 
 <img width="1912" height="1001" alt="Screenshot 2026-08-06 202026" src="https://github.com/user-attachments/assets/c04d48d1-fc87-456a-a5ec-9a12ce22a6cb" />
-
-
-
-
-
-
-
-
-
 
 
 # RESULT:
