@@ -99,30 +99,31 @@ np.square(df["Highly Positive Skew"])
 df["Highly Positive Skew_boxcox"], parameters = stats.boxcox(df["Highly Positive Skew"])
 <img width="1912" height="995" alt="Screenshot 2026-08-06 201534" src="https://github.com/user-attachments/assets/6dfaac11-c5bd-481f-8eca-f0c02e6a90ed" />
 df.skew()
-<img width="1916" height="1021" alt="Screenshot 2026-08-06 201545" src="https://github.com/user-attachments/assets/1b2055c1-112c-4e78-b256-953635eb3e11" />
 df["Highly Negative Skew_yeojohnson"], parameters = stats.yeojohnson(df["Highly Negative Skew"])
+
 df.skew()
 <img width="1912" height="1011" alt="Screenshot 2026-08-06 201557" src="https://github.com/user-attachments/assets/a0d25339-a780-47ec-9392-bd20f398891f" />
 from sklearn.preprocessing import QuantileTransformer
 qt = QuantileTransformer(output_distribution='normal')
 df["Moderate Negative Skew_1"] = qt.fit_transform(df[["Moderate Negative Skew"]])
 df
-<img width="1915" height="1008" alt="Screenshot 2026-08-06 201900" src="https://github.com/user-attachments/assets/af24532d-a89d-4db7-a929-4b1fb90ced33" />
+<img width="1916" height="1021" alt="Screenshot 2026-08-06 201545" src="https://github.com/user-attachments/assets/1b2055c1-112c-4e78-b256-953635eb3e11" />
 import seaborn as sns
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 sm.qqplot(df["Moderate Negative Skew"], line='45')
 plt.show()
-<img width="1917" height="1015" alt="Screenshot 2026-08-06 201910" src="https://github.com/user-attachments/assets/9b9a3681-e056-439f-a295-d0a5fda53eab" />
+
+
+<img width="1915" height="1008" alt="Screenshot 2026-08-06 201900" src="https://github.com/user-attachments/assets/af24532d-a89d-4db7-a929-4b1fb90ced33" />
 sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]), line='45')
 plt.show()
-<img width="1916" height="1013" alt="Screenshot 2026-08-06 201938" src="https://github.com/user-attachments/assets/93540a13-8f09-4df0-b5b3-2320abfc1bd5" />
-from sklearn.preprocessing import QuantileTransformer
+<img width="1917" height="1015" alt="Screenshot 2026-08-06 201910" src="https://github.com/user-attachments/assets/9b9a3681-e056-439f-a295-d0a5fda53eab" />
 
-qt = QuantileTransformer(output_distribution='normal', n_quantiles=891)
-df["Moderate Negative Skew"] = qt.fit_transform(df[["Moderate Negative Skew"]])
-sm.qqplot(df["Moderate Negative Skew"], line='45')
-plt.show()
+
+
+<img width="1916" height="1013" alt="Screenshot 2026-08-06 201938" src="https://github.com/user-attachments/assets/93540a13-8f09-4df0-b5b3-2320abfc1bd5" />
+
 <img width="1917" height="1012" alt="Screenshot 2026-08-06 201949" src="https://github.com/user-attachments/assets/832f685e-0d4b-4498-a5be-ae7600e27573" />
 df["Highly Negative Skew_1"] = qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"], line='45')
