@@ -55,6 +55,7 @@ df
 ~~~
 
 <img width="1917" height="1017" alt="Screenshot 2026-08-06 201226" src="https://github.com/user-attachments/assets/4f30b01c-fdde-42a2-b6fd-77ccb7a289b9" />
+
 ~~~
 le=LabelEncoder()
 dfc=df.copy()
@@ -63,6 +64,7 @@ dfc
 ~~~
 
 <img width="1916" height="1007" alt="Screenshot 2026-08-06 201238" src="https://github.com/user-attachments/assets/4e9164ad-2db1-497f-95d9-f44182091c8c" />
+
 ~~~
 from sklearn.preprocessing import OneHotEncoder
 ohe=OneHotEncoder(sparse_output=False)
