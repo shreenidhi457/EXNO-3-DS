@@ -43,7 +43,7 @@ pm=['Hot','Warm','Cold']
 e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 
-<img width="1917" height="865" alt="Screenshot 2026-08-06 201212" src="https://github.com/user-attachments/assets/0a0c14e9-30d3-4793-a8bb-3eba354a5b4d" /
+<img width="1917" height="865" alt="Screenshot 2026-08-06 201212" src="https://github.com/user-attachments/assets/0a0c14e9-30d3-4793-a8bb-3eba354a5b4d" />
 df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 <img width="1917" height="1017" alt="Screenshot 2026-08-06 201226" src="https://github.com/user-attachments/assets/4f30b01c-fdde-42a2-b6fd-77ccb7a289b9" />
