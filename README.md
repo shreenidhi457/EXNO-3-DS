@@ -75,10 +75,24 @@ dfb=pd.concat([df,nd],axis=1)
 dfb
 
 <img width="1917" height="1017" alt="Screenshot 2026-08-06 201331" src="https://github.com/user-attachments/assets/0abf3e21-3c11-4e0e-8d51-3bf13346bf28" />
+from category_encoders import TargetEncoder
+te=TargetEncoder()
+cc=df.copy()
+new=te.fit_transform(X=cc["City"],y=cc["Target"])
+cc=pd.concat([cc,new],axis=1)
+cc
 <img width="1917" height="997" alt="Screenshot 2026-08-06 201346" src="https://github.com/user-attachments/assets/c9f4e083-4393-4ee1-b779-c48262edb8b1" />
+import pandas as pd
+from scipy import stats
+import numpy as np
+df=pd.read_csv("/content/Data_to_Transform (1).csv")
+df
 <img width="1917" height="1013" alt="Screenshot 2026-08-06 201358" src="https://github.com/user-attachments/assets/16fa4a21-7872-401b-bfb7-14f9c4153d76" />
+np.log(df["Highly Positive Skew"])
 <img width="1917" height="1008" alt="Screenshot 2026-08-06 201414" src="https://github.com/user-attachments/assets/0bd6a104-e341-4ed4-b3ed-6352f17a61e6" />
+np.reciprocal(df["Moderate Positive Skew"])
 <img width="1916" height="1011" alt="Screenshot 2026-08-06 201424" src="https://github.com/user-attachments/assets/514dc35c-cab2-4a8c-9e1b-b29a23e56db3" />
+np.square(df["Highly Positive Skew"])
 <img width="1912" height="1012" alt="Screenshot 2026-08-06 201458" src="https://github.com/user-attachments/assets/9637d9c7-7c9f-4b0e-b027-44703281ab6c" />
 <img width="1917" height="1012" alt="Screenshot 2026-08-06 201524" src="https://github.com/user-attachments/assets/ba5f01cd-c87f-4002-801b-930e9f54bd41" />
 <img width="1912" height="995" alt="Screenshot 2026-08-06 201534" src="https://github.com/user-attachments/assets/6dfaac11-c5bd-481f-8eca-f0c02e6a90ed" />
