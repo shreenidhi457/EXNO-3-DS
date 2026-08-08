@@ -119,19 +119,31 @@ plt.show()
 sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]), line='45')
 plt.show()
 <img width="1917" height="1015" alt="Screenshot 2026-08-06 201910" src="https://github.com/user-attachments/assets/9b9a3681-e056-439f-a295-d0a5fda53eab" />
+from sklearn.preprocessing import QuantileTransformer
 
+qt = QuantileTransformer(output_distribution='normal', n_quantiles=891)
+
+df["Moderate Negative Skew"] = qt.fit_transform(df[["Moderate Negative Skew"]])
+sm.qqplot(df["Moderate Negative Skew"], line='45')
+plt.show()
 
 
 <img width="1916" height="1013" alt="Screenshot 2026-08-06 201938" src="https://github.com/user-attachments/assets/93540a13-8f09-4df0-b5b3-2320abfc1bd5" />
-
-<img width="1917" height="1012" alt="Screenshot 2026-08-06 201949" src="https://github.com/user-attachments/assets/832f685e-0d4b-4498-a5be-ae7600e27573" />
 df["Highly Negative Skew_1"] = qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"], line='45')
 plt.show()
-<img width="1916" height="1017" alt="Screenshot 2026-08-06 202001" src="https://github.com/user-attachments/assets/e49fea11-cb33-4138-b0da-15144ed5fe71" />
+<img width="1917" height="1012" alt="Screenshot 2026-08-06 201949" src="https://github.com/user-attachments/assets/832f685e-0d4b-4498-a5be-ae7600e27573" />
 sm.qqplot(df["Highly Negative Skew_1"], line='45')
 plt.show()
+
+<img width="1916" height="1017" alt="Screenshot 2026-08-06 202001" src="https://github.com/user-attachments/assets/e49fea11-cb33-4138-b0da-15144ed5fe71" />
+dt=pd.read_csv("/content/titanic_dataset.csv")
+dt["Age_1"] = qt.fit_transform(dt[["Age"]])
+sm.qqplot(dt["Age"], line='45')
+plt.show()
 <img width="1916" height="1015" alt="Screenshot 2026-08-06 202012" src="https://github.com/user-attachments/assets/735fd4cc-d30f-4a72-8eb8-2f29e20a5693" />
+sm.qqplot(dt["Age_1"], line='45')
+plt.show()
 <img width="1912" height="1001" alt="Screenshot 2026-08-06 202026" src="https://github.com/user-attachments/assets/c04d48d1-fc87-456a-a5ec-9a12ce22a6cb" />
 
 
